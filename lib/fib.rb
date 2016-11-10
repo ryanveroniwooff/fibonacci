@@ -4,14 +4,11 @@ end
 
 def iterative_fib(n)
   table = [1,1]
-  if n == 0 || n == 1 || n == 2
-    return 1
-  else
-    n.times do
-      @fib_table = table[table.length-1] + (table[table.length - 2])
-      table << @fib_table
-    end
+  n.times do
+    @fib_table = table[table.length-1] + (table[table.length - 2])
+    table << @fib_table
   end
+
   return table.last
 end
 
